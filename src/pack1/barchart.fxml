@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="631.0" prefWidth="1097.0" style="-fx-background-color: #D388F4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pack1.chart_controller">
+   <children>
+      <Label fx:id="bc_title" layoutX="24.0" layoutY="445.0" prefHeight="31.0" prefWidth="492.0" text="LineChart title" textFill="#2e5b2c">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="bc_detail" layoutX="23.0" layoutY="482.0" prefHeight="68.0" prefWidth="492.0" text="LineChart Details">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="908.0" layoutY="14.0" mnemonicParsing="false" onAction="#b_load_data" style="-fx-background-color: black; -fx-background-radius: 2em;" text="Load Chart" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="908.0" layoutY="58.0" mnemonicParsing="false" onAction="#clear_barchart" prefHeight="31.0" prefWidth="93.0" style="-fx-background-color: black; -fx-background-radius: 2em;" text="Reset" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="b_title" layoutX="554.0" layoutY="37.0" prefHeight="25.0" prefWidth="316.0" promptText="BarChart title (optional)" style="-fx-background-color: gray; -fx-background-radius: 1em;" />
+      <TextField fx:id="b_name" layoutX="554.0" layoutY="169.0" prefHeight="25.0" prefWidth="316.0" promptText="Name of data" style="-fx-background-color: gray; -fx-background-radius: 1em;" />
+      <TextField fx:id="b_data" layoutX="554.0" layoutY="208.0" prefHeight="25.0" prefWidth="316.0" promptText="Numerical data value" style="-fx-background-color: gray; -fx-background-radius: 1em;" />
+      <TextArea layoutX="554.0" layoutY="73.0" prefHeight="86.0" prefWidth="316.0" promptText="BarChart description (optional)" />
+      <Button layoutX="831.0" layoutY="579.0" mnemonicParsing="false" onAction="#b_add" style="-fx-background-color: black; -fx-background-radius: 2em;" text="Add" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Line endX="385.0" endY="213.0" layoutX="508.0" layoutY="418.0" startX="385.0" startY="-398.0" />
+      <TextField fx:id="b_xaxis" layoutX="554.0" layoutY="246.0" prefHeight="25.0" prefWidth="316.0" promptText="Name of X-axis" style="-fx-background-color: gray; -fx-background-radius: 1em;" />
+      <TextField fx:id="b_yaxis" layoutX="554.0" layoutY="282.0" prefHeight="25.0" prefWidth="316.0" promptText="Name of Y-axis" style="-fx-background-color: gray; -fx-background-radius: 1em;" />
+      <TextField fx:id="b_series_name" layoutX="554.0" layoutY="319.0" prefHeight="25.0" prefWidth="316.0" promptText="Series name" style="-fx-background-color: gray; -fx-background-radius: 1em;" />
+      <BarChart fx:id="b1">
+        <xAxis>
+          <CategoryAxis fx:id="bxxis" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="byxis" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Line endX="385.0" layoutX="130.0" layoutY="399.0" startX="385.0" startY="-398.0" />
+      <Line endX="388.5" endY="-9.5" layoutX="127.0" layoutY="409.0" startX="-129.0" startY="-9.5" />
+      <Label fx:id="b_nm_dt_error" layoutX="559.0" layoutY="581.0" prefHeight="27.0" prefWidth="255.0" textFill="#9a2525">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="908.0" layoutY="101.0" mnemonicParsing="false" onAction="#b_table" prefHeight="31.0" prefWidth="93.0" style="-fx-background-color: black; -fx-background-radius: 2em;" text="Show List" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <TableView fx:id="b_table" layoutX="902.0" layoutY="146.0" prefHeight="475.0" prefWidth="184.0" style="-fx-background-radius: 2em;" visible="false" />
+   </children>
+</AnchorPane>
